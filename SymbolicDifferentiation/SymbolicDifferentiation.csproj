@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Include="obj\Debug\net7.0\DiffGrammarLexer.tokens" />
+      <Content Include="obj\Debug\net7.0\ReductionLexer.tokens" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Antlr4" Version="4.6.6">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Antlr4.CodeGenerator" Version="4.6.6">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Antlr4BuildTasks" Version="12.7.0" />
+        <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="Generated\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Compile Include="obj\Debug\net7.0\DiffGrammarBaseListener.cs" />
+      <Compile Include="obj\Debug\net7.0\DiffGrammarBaseVisitor.cs" />
+      <Compile Include="obj\Debug\net7.0\DiffGrammarLexer.cs" />
+      <Compile Include="obj\Debug\net7.0\DiffGrammarListener.cs" />
+      <Compile Include="obj\Debug\net7.0\DiffGrammarParser.cs" />
+      <Compile Include="obj\Debug\net7.0\DiffGrammarVisitor.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionBaseListener.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionBaseVisitor.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionLexer.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionListener.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionParser.cs" />
+      <Compile Include="obj\Debug\net7.0\ReductionVisitor.cs" />
+    </ItemGroup>
+</Project>
